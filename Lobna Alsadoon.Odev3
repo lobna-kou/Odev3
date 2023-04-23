@@ -1,0 +1,28 @@
+Q:There are 12 balls in the pool. 6 balls are blue and the rest are red. Two of the balls are picked up from the pool without replacement. What is the probability of selecting two red balls from the pool?
+Solution:
+We will calculate the probability of the first ball.
+Total number of balls in the pool = 12
+Probability that a randomly selected ball is red = 6/12=1/2 
+ 
+Now, we will compute the probability of the second ball.
+Total number of balls left in the pool = 11
+Number of red balls left in the pool = 5
+Probability of selecting a red ball second time =  5/11
+ 
+Probability that two balls selected randomly are red in color = P(A) x P(B|A) =  1/2 . 5/11= 5/22 
+  
+Paython solution :
+
+# Define variables
+total_balls = 12
+red_balls = total_balls - 6
+# Calculate probability of selecting first red ball
+prob_red_first = red_balls / total_balls
+# Calculate probability of selecting second red ball given first ball is red
+prob_red_second_given_red_first = (red_balls - 1) / (total_balls - 1)
+# Calculate probability of selecting two red balls
+prob_two_red_balls = prob_red_first * prob_red_second_given_red_first
+# Print the result
+print("The probability of selecting two red balls from the pool is:", prob_two_red_balls)
+
+Output: The probability of selecting two red balls from the pool is: 0.22727
